@@ -1,0 +1,15 @@
+# Create a handle for each plot
+fahrenheit, = plt.plot(x_axis, points_F, marker="+",color="blue", linewidth=1, label="Fahreneit")
+celcius, = plt.plot(x_axis, points_C, marker="s", color="Red", linewidth=1, label="Celcius")
+
+# Set our legend to where the chart thinks is best
+plt.legend(handles=[fahrenheit, celcius], loc="best")
+
+# Create labels for the X and Y axis
+plt.xlabel("Months")
+plt.ylabel("Degrees")
+
+# Save and display the chart
+output_file = "1/Activities/04-Stu_LegendaryTemperature/Images/avg_temp.png"
+plt.savefig(output_file)
+plt.show()
